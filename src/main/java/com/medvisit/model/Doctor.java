@@ -1,11 +1,13 @@
 package com.medvisit.model;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Doctor {
+	
 
 	private String id;
 	
@@ -20,6 +22,12 @@ public class Doctor {
 	private String description;
 	
 	private Address address ;
+	
+	
+	
+	private Map<String,List<String>> filledHours;
+	
+	private List<String> availableHours;
 
 	public String getId() {
 		return id;
@@ -76,6 +84,24 @@ public class Doctor {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+
+	public Map<String, List<String>> getFilledHours() {
+		return filledHours;
+	}
+
+	public void setFilledHours(Map<String, List<String>> filledHours) {
+		this.filledHours = filledHours;
+	}
+
+	public List<String> getAvailableHours() {
+		return availableHours;
+	}
+
+	public void setAvailableHours(List<String> availableHours) {
+		this.availableHours = availableHours;
+	}
+
+	
 	
 	
 }
