@@ -25,8 +25,16 @@ public class Doctor {
 	
 	
 	
-	private Map<String,List<String>> filledHours;
+	private Map<String,String[]> filledHours;
 	
+	public Map<String, String[]> getFilledHours() {
+		return filledHours;
+	}
+
+	public void setFilledHours(Map<String, String[]> filledHours) {
+		this.filledHours = filledHours;
+	}
+
 	private List<String> availableHours;
 
 	public String getId() {
@@ -85,13 +93,7 @@ public class Doctor {
 		this.address = address;
 	}
 
-	public Map<String, List<String>> getFilledHours() {
-		return filledHours;
-	}
-
-	public void setFilledHours(Map<String, List<String>> filledHours) {
-		this.filledHours = filledHours;
-	}
+	
 
 	public List<String> getAvailableHours() {
 		return availableHours;
